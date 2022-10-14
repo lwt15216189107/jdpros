@@ -1,0 +1,67 @@
+ <!-- 首页 -->
+ <div class="first-page">
+    <div class="zbo">
+        <div class="left">
+            <img src="../img/b1.png.dpg" alt="">
+            <img src="../img/zbo.png" alt="">
+        </div>
+        <div class="right">
+            <span>小适修容季</span>
+            <span>立即观看</span>
+            <div class="pic">
+                <img src="../img/b2.jpg!q80" alt="">
+                <img src="../img/b3.jpg!q80" alt="">
+                <img src="../img/b4.jpg!q80" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="hot">
+        <img src="../img/b5jpg!q80.jpg!q80" alt="">
+        <img src="../img/b6.jpg!q80" alt="">
+        <img src="../img/b8jpg!q80.jpg!q80" alt="">
+        <img src="../img/b9.jpg!q80" alt="">
+        <img src="../img/b10.jpg!q80" alt="">
+        <img src="../img/b11.jpg!q80" alt="">
+        <img src="../img/b12.jpg!q80" alt="">
+        <img src="../img/b13.jpg!q80" alt="">
+        <img src="../img/b14.jpg!q80" alt="">
+        <img src="../img/b15.jpg!q80" alt="">
+        <img src="../img/b16.jpg!q80" alt="">
+        <img src="../img/b17.jpg!q80" alt="">
+    </div>
+</div>
+<!-- 商品 -->
+<div class="goods">
+    <div class="nav">
+        <ul>
+            <li>推荐 <img src="./img/sxpng.png" alt=""></li>
+            <li>销量</li>
+            <li>新品</li>
+            <li>价格<img src="./img/sxpng.png" alt=""></li>
+        </ul>
+    </div>
+    <div class="list">
+        <ul>
+            <% for(let x of data) {%>
+                <li>
+                    <img src="<%= x.img1 %>" alt="">
+                    <div class="content">
+                        <p class="ellipsis-2">
+                            <span>热销</span>
+                            <%= x.title %>
+                        </p>
+                        <span>本店<%= x.classfy %>热销第<%= x.ranking %>名</span>
+                        <p>¥<i>
+                                <%= x.price %>
+                            </i>.00 <span>
+                                <%= x.reduce %>
+                            </span></p>
+                        <p>
+                            <%= x.evaluate %>+条评价 <span>好评 <%= x.good %>%</span>
+                        </p>
+                    </div>
+                </li>
+                <%} %>
+        </ul>
+    </div>
+</div>
